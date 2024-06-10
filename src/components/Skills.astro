@@ -1,0 +1,74 @@
+---
+import Android from "../components/icons/Android.astro";
+import Kotlin from "../components/icons/Kotlin.astro";
+import ReactN from "../components/icons/ReactN.astro";
+import Java from "../components/icons/Java.astro";
+import BS5 from "../components/icons/BS5.astro";
+import AstroSVG from "../components/icons/AstroSVG.astro";
+import Compose from "./icons/compose.astro";
+import Golang from "./icons/Golang.astro";
+import Swift from "./icons/Swift.astro";
+import Python from "./icons/Python.astro";
+import Firebase from "./icons/Firebase.astro";
+import GolangO from "./icons/GolangO.astro";
+import SwiftO from "./icons/SwiftO.astro";
+
+// Habilidades actuales
+const SKILLS = [
+    { name: "Kotlin", icon: Kotlin },
+    { name: "Android", icon: Android },
+    { name: "Compose", icon: Compose },
+    { name: "Firebase", icon: Firebase },
+    { name: "Java", icon: Java },
+    { name: "Astro", icon: AstroSVG },
+    { name: "Tailwind", icon: ReactN },
+    { name: "Bootstrap 5", icon: BS5 },
+];
+
+// Habilidades que estás aprendiendo
+const LEARNING = [
+    { name: "Compose", icon: Compose },
+    { name: "Go", icon: GolangO },
+    { name: "Swift", icon: SwiftO },
+    { name: "Python", icon: Python },
+];
+---
+
+<div class="container mx-auto mt-8 space-y-12">
+    <div>
+            <div class="flex gap-10 flex-wrap justify-start">
+            {
+                SKILLS.map((skill) => (
+                    <div class="flex flex-col items-center">
+                        <div class="size-24 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+                            <skill.icon class="w-8 h-8" />
+                        </div>
+                        <p class="mt-2 text-center text-gray-800 dark:text-gray-200 text-sm font-semibold">
+                            {skill.name}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+
+    <div>
+        <h2 class="text-2xl font-bold mb-6 dark:text-white">
+            Actualmente aprendiendo o interesado
+        </h2>
+        <div class="flex gap-10 flex-wrap justify-start">
+            {
+                LEARNING.map((skill) => (
+                    <div class="flex flex-col items-center">
+                        <div class="size-24 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+                            <skill.icon class="w-8 h-8" />
+                        </div>
+                        <p class="mt-2 text-center text-gray-800 dark:text-gray-200 text-sm font-semibold">
+                            {skill.name}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>

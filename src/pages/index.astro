@@ -1,0 +1,72 @@
+---
+import Presentation from "../components/Presentation.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import SContainer from "../components/SContainer.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Layout from "../layouts/Layout.astro";
+import Theme from "../components/Theme.astro";
+
+const links = [
+	{
+		href: "https://github.com/alesguga",
+		icon: "GitHubIcon",
+		alt: "GitHub",
+	},
+	{
+		href: "https://linkedin.com/in/alejandro-gutiérrez-4b863b295",
+		icon: "LinkedInIcon",
+		alt: "LinkedIn",
+	},
+	{
+		href: "mailto:alexgutygalan11@gmail.com",
+		icon: "MailIcon",
+		alt: "Email",
+	},
+	{
+		href: "./CV Alejandro Gutierrez.pdf",
+		icon: "CvIcon",
+		alt: "Cv",
+	},
+];
+---
+
+<Layout title="Bienvenido a mi Portfolio!">
+	<main>
+		<Theme />
+		<SContainer>
+			<Presentation
+				name="Alejandro Gutiérrez"
+				description="Desarrollador de Aplicaciones Móviles, trabajo principalmente con Kotlin y Jetpack Compose y/o vistas XML."
+				location="Toledo, España, 45005"
+				imageUrl="./cropped_image.jpg"
+				links={links}
+			/>
+		</SContainer>
+		<SContainer>
+			<h1 class="dark:text-white font-bold text-3xl text-gray-950">
+				Sobre mí
+			</h1>
+			<About />
+		</SContainer>
+		<SContainer>
+			<h1 class="dark:text-white font-bold text-3xl text-gray-950">
+				Experiencia Laboral
+			</h1>
+			<Experience />
+		</SContainer>
+		<SContainer>
+			<h1 class="dark:text-white font-bold text-3xl text-gray-950">
+				Proyectos
+			</h1>
+			<Projects />
+		</SContainer>
+		<SContainer>
+			<h1 class="dark:text-white font-bold text-3xl text-gray-950">
+				Skills
+			</h1>
+			<Skills />
+		</SContainer>
+	</main>
+</Layout>
