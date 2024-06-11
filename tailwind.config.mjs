@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'light-gradient': "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(217,216,255,0.9), rgba(255,255,255,0.9))",
+				'light-gradient': "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(217,216,255,0.9), rgba(255,255,255,0.2))",
 				'dark-gradient': "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0))",
 			  },
 		},
