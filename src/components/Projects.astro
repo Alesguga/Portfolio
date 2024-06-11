@@ -15,6 +15,7 @@ import ReactNN from "../components/icons/ReactNN.astro";
 import Expo from "../components/icons/Expo.astro";
 import Mongo from "./icons/Mongo.astro";
 import ChakraUI from "./icons/ChakraUI.astro";
+import Compose from "./icons/compose.astro";
 
 const TAGS = {
   FIRE: {
@@ -97,6 +98,11 @@ const TAGS = {
     class: "bg-blue-800 text-white",
     icon: ChakraUI,
   },
+  COMPOSE: {
+    name: "Compose",
+    class: "bg-gray-900 text-white",
+    icon: Compose,
+  },
 }
 
 const PROJECTS = [
@@ -106,7 +112,7 @@ const PROJECTS = [
       "Proyecto de trabajo de fin de grado, donde creo mi propia API con FastApi la web con Astro y la app con Kotlin, para una empresa de muebles. He usado servicios como firebase y retrofit con Kotlin también.",
     github: "https://github.com/alesguga/MueblesElPuenteAppTFG",
     image: "https://www.muebleselpuente.com/gallery/dor-cont12_22174ob8.jpg",
-    tags: [ TAGS.FIRE, TAGS.ASTRO, TAGS.KOTLIN, TAGS.PYTHON],
+    tags: [ TAGS.FIRE, TAGS.ASTRO, TAGS.COMPOSE, TAGS.PYTHON],
   },
   {
     title: "Chistes Retrofit",
