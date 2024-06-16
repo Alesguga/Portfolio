@@ -104,7 +104,7 @@ const TAGS = {
     class: "bg-gray-900 text-white",
     icon: Compose,
   },
-}
+};
 
 const PROJECTS = [
   {
@@ -114,7 +114,7 @@ const PROJECTS = [
     github: "https://github.com/alesguga/MueblesElPuenteAppTFG",
     link: "https://muebles-el-puente-web-tfg.vercel.app/",
     image: "https://www.muebleselpuente.com/gallery/dor-cont12_22174ob8.jpg",
-    tags: [ TAGS.FIRE, TAGS.ASTRO, TAGS.COMPOSE, TAGS.PYTHON],
+    tags: [TAGS.FIRE, TAGS.ASTRO, TAGS.COMPOSE, TAGS.PYTHON],
   },
   {
     title: "DevHub",
@@ -129,16 +129,18 @@ const PROJECTS = [
     description:
       "Aplicación en Android Studio en Kotlin que accedemos a una api mediante Retrofit que tiene login categorias de chistes buscador y permite introducir nuevos chistes",
     github: "https://github.com/alesguga/ChistesRetrofit",
-    image: "https://piks.eldesmarque.com/bin/2023/06/07/230606_dep_betis_homenaje_joaquin_zona_mixtamovmxf_frame_10538.jpeg",
-    tags: [ TAGS.KOTLIN, TAGS.ANDROID],
+    image:
+      "https://piks.eldesmarque.com/bin/2023/06/07/230606_dep_betis_homenaje_joaquin_zona_mixtamovmxf_frame_10538.jpeg",
+    tags: [TAGS.KOTLIN, TAGS.ANDROID],
   },
   {
     title: "Caravan Retrofit",
     description:
       "Aplicación en Android Studio en Kotlin que accedemos a una api mediante Retrofit que tiene login, listado de caravanas, buscador y permite introducir nuevos sitios donde dormir en la caravana, pudiendo darle estrellas",
     github: "https://github.com/alesguga/CaravanRetrofit",
-    image: "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/06/fleetwood-bounder-1986-2729789.jpg",
-    tags: [ TAGS.KOTLIN, TAGS.ANDROID],
+    image:
+      "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/06/fleetwood-bounder-1986-2729789.jpg",
+    tags: [TAGS.KOTLIN, TAGS.ANDROID],
   },
   {
     title: "Mi primera api con Go y Firebase",
@@ -146,8 +148,9 @@ const PROJECTS = [
       "Realizo mi primera api con Golang y Firebase donde se puede realizar un CRUD y funciona a la perfeccion con un Front en React por ejemplo.",
     github: "https://github.com/Alesguga/GolangApiNotes",
     link: "https://golangapinotes-production.up.railway.app/notes",
-    image: "https://cdn-images-1.medium.com/max/1200/1*1VNJ8QaNInU_kgRflPKXAQ.png",
-    tags: [ TAGS.GO, TAGS.FIRE],
+    image:
+      "https://cdn-images-1.medium.com/max/1200/1*1VNJ8QaNInU_kgRflPKXAQ.png",
+    tags: [TAGS.GO, TAGS.FIRE],
   },
   {
     title: "Todo Web App Go React Ts",
@@ -156,60 +159,89 @@ const PROJECTS = [
     github: "https://github.com/Alesguga/TodoWebapp-GoReactTs",
     link: "https://todowebapp-goreactts-production.up.railway.app/",
     image: "https://img-c.udemycdn.com/course/750x422/2734116_da25_3.jpg",
-    tags: [ TAGS.GO, TAGS.MONGO, TAGS.REACT, TAGS.CHAKRA],
+    tags: [TAGS.GO, TAGS.MONGO, TAGS.REACT, TAGS.CHAKRA],
   },
   {
     title: "PorraGut",
     description:
       "Web usando JavaWeb con JPA, JSTL, Ajax y una BBDD en Oracle para hacer una web de apuestas de goles de partidos de futbol de la liga española.",
     github: "https://github.com/alesguga/PorraGutJPA",
-    image: "https://www.mundiario.com/asset/thumbnail,1280,720,center,center/media/mundiario/images/2023/08/13/2023081312144866046.jpg",
-    tags: [ TAGS.JAVA, TAGS.SQL, TAGS.HTML, TAGS.BS5],
+    image:
+      "https://www.mundiario.com/asset/thumbnail,1280,720,center,center/media/mundiario/images/2023/08/13/2023081312144866046.jpg",
+    tags: [TAGS.JAVA, TAGS.SQL, TAGS.HTML, TAGS.BS5],
   },
   {
     title: "Games4All",
     description:
       "Aplicacion en React Native que busca videojuegos accediendo a una Api, cuenta con unos filtros de busqueda y diseño para Apple y Android",
     github: "https://github.com/alesguga/AppConsumesApiRN",
-    image: "https://assets.xboxservices.com/assets/1d/5b/1d5bc84f-2135-4e2f-8ca6-bb000d97db7f.jpg?n=Elden-Ring_GLP-Poster-Image-1084_1920x1080.jpg",
-    tags: [ TAGS.RN, TAGS.EXPO],
+    image:
+      "https://assets.xboxservices.com/assets/1d/5b/1d5bc84f-2135-4e2f-8ca6-bb000d97db7f.jpg?n=Elden-Ring_GLP-Poster-Image-1084_1920x1080.jpg",
+    tags: [TAGS.RN, TAGS.EXPO],
   },
-]
+];
 ---
 
-<div class="grid grid-cols-1 mt-4 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-  {
-    PROJECTS.map(({ image, title, description, tags, github, link }) => (
-      <div class="bg-white dark:bg-gray-800 transition p-6 rounded-lg shadow-lg flex flex-col justify-between">
-        <div>
-          <img class="w-full h-52 rounded-lg object-cover mb-6" src={image} alt={title} loading="lazy" />
-          <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">{title}</h3>
-          <div class="flex flex-wrap gap-2 mb-4">
-            {tags.map(tag => (
-              <span class={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold select-none ${tag.class}`}>
-                <tag.icon class="w-4 h-4" />
-                {tag.name}
-              </span>
-            ))}
+<div class="p-4 sm:p-0">
+  <h1 class="dark:text-white mb-4 font-bold text-3xl text-gray-950">
+    Proyectos
+  </h1>
+  <div
+    class="grid grid-cols-1  gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 "
+  >
+    {
+      PROJECTS.map(({ image, title, description, tags, github, link }) => (
+        <div class="bg-white dark:bg-gray-800 transition p-6 rounded-lg shadow-lg flex flex-col justify-between">
+          <div>
+            <img
+              class="w-full h-52 rounded-lg object-cover mb-6"
+              src={image}
+              alt={title}
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {tags.map((tag) => (
+                <span
+                  class={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold select-none ${tag.class}`}
+                >
+                  <tag.icon class="w-4 h-4" />
+                  {tag.name}
+                </span>
+              ))}
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
           </div>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
+          <div class="mt-auto flex gap-x-4 justify-start">
+            {github && (
+              <a
+                href={github}
+                role="link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-400 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400"
+              >
+                <GitHub class="size-5 mr-2" />
+                <span>Código</span>
+              </a>
+            )}
+            {link && (
+              <a
+                href={link}
+                role="link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-400 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400"
+              >
+                <Link class="size-5 mr-2" />
+                <span>Enlace</span>
+              </a>
+            )}
+          </div>
         </div>
-        <div class="mt-auto flex gap-x-4 justify-start">
-          {github && (
-            <a href={github} role="link" target="_blank" rel="noopener noreferrer" class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-400 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400">
-              <GitHub class="size-5 mr-2" />
-              <span>Código</span>
-            </a>
-          )}
-          {link && (
-            <a href={link} role="link" target="_blank" rel="noopener noreferrer" class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-400 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400">
-              <Link class="size-5 mr-2" />
-              <span>Enlace</span>
-            </a>
-          )}
-        </div>
-
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>

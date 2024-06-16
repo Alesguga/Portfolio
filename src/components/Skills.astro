@@ -48,9 +48,12 @@ const LEARNING = [
     }
 </style>
 
-<div class="container mx-auto mt-8 space-y-12">
+<div class="container mx-auto mt-8 space-y-12 p-4 sm:p-0">
+    <h1 class="dark:text-white font-bold text-3xl text-gray-950">
+        Skills
+    </h1>
     <div>
-        <div class="flex gap-8 flex-wrap justify-start">
+        <div class="flex gap-8 flex-wrap sm:justify-start justify-center">
             {
                 SKILLS.map((skill) => (
                     <div class="flex flex-col items-center skill-container">
@@ -67,10 +70,10 @@ const LEARNING = [
     </div>
 
     <div >
-        <h2 class="text-2xl font-bold mb-6 dark:text-white">
+        <h2 class="text-3xl font-bold mb-6 dark:text-white">
             Aprendiendo
         </h2>
-        <div class="flex gap-8 flex-wrap justify-start">
+        <div class="flex gap-8 flex-wrap sm:justify-start justify-center">
             {
                 LEARNING.map((skill) => (
                     <div class="flex flex-col items-center skill-container">
