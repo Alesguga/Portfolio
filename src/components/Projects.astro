@@ -16,6 +16,7 @@ import Expo from "../components/icons/Expo.astro";
 import Mongo from "./icons/Mongo.astro";
 import ChakraUI from "./icons/ChakraUI.astro";
 import Compose from "./icons/compose.astro";
+import Link from "./icons/Link.astro";
 
 const TAGS = {
   FIRE: {
@@ -35,7 +36,7 @@ const TAGS = {
   },
   KOTLIN: {
     name: "Kotlin",
-    class: "bg-stone-700 text-white",
+    class: "bg-violet-950 text-white",
     icon: Kotlin,
   },
   PYTHON: {
@@ -111,6 +112,7 @@ const PROJECTS = [
     description:
       "Proyecto de trabajo de fin de grado, donde creo mi propia API con FastApi la web con Astro y la app con Kotlin, para una empresa de muebles. He usado servicios como firebase y retrofit con Kotlin también.",
     github: "https://github.com/alesguga/MueblesElPuenteAppTFG",
+    link: "https://muebles-el-puente-web-tfg.vercel.app/",
     image: "https://www.muebleselpuente.com/gallery/dor-cont12_22174ob8.jpg",
     tags: [ TAGS.FIRE, TAGS.ASTRO, TAGS.COMPOSE, TAGS.PYTHON],
   },
@@ -143,6 +145,7 @@ const PROJECTS = [
     description:
       "Realizo mi primera api con Golang y Firebase donde se puede realizar un CRUD y funciona a la perfeccion con un Front en React por ejemplo.",
     github: "https://github.com/Alesguga/GolangApiNotes",
+    link: "https://golangapinotes-production.up.railway.app/",
     image: "https://cdn-images-1.medium.com/max/1200/1*1VNJ8QaNInU_kgRflPKXAQ.png",
     tags: [ TAGS.GO, TAGS.FIRE],
   },
@@ -151,6 +154,7 @@ const PROJECTS = [
     description:
       "Todo fullstack app con Go en el backend y React con Typescript y chakraUI en el frontend, con una base de datos en MongoDB, con deploy en Railway.",
     github: "https://github.com/Alesguga/TodoWebapp-GoReactTs",
+    link: "https://todowebapp-goreactts-production.up.railway.app/",
     image: "https://img-c.udemycdn.com/course/750x422/2734116_da25_3.jpg",
     tags: [ TAGS.GO, TAGS.MONGO, TAGS.REACT, TAGS.CHAKRA],
   },
@@ -175,7 +179,7 @@ const PROJECTS = [
 
 <div class="grid grid-cols-1 mt-4 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
   {
-    PROJECTS.map(({ image, title, description, tags, github }) => (
+    PROJECTS.map(({ image, title, description, tags, github, link }) => (
       <div class="bg-white dark:bg-gray-800 transition p-6 rounded-lg shadow-lg flex flex-col justify-between">
         <div>
           <img class="w-full h-52 rounded-lg object-cover mb-6" src={image} alt={title} loading="lazy" />
@@ -190,14 +194,21 @@ const PROJECTS = [
           </div>
           <p class="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
         </div>
-        <div class="mt-auto">
+        <div class="mt-auto flex gap-x-4 justify-start">
           {github && (
             <a href={github} role="link" target="_blank" rel="noopener noreferrer" class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-400 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400">
               <GitHub class="size-5 mr-2" />
               <span>Código</span>
             </a>
           )}
+          {link && (
+            <a href={link} role="link" target="_blank" rel="noopener noreferrer" class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-400 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400">
+              <Link class="size-5 mr-2" />
+              <span>Enlace</span>
+            </a>
+          )}
         </div>
+
       </div>
     ))
   }
