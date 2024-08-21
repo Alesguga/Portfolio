@@ -28,12 +28,6 @@ const SKILLS = [
     { name: "MongoDB", icon: Mongo },
     { name: "Figma", icon: Figma },
 ];
-
-/*const LEARNING = [
-    { name: "Go", icon: Golang },
-    { name: "Swift", icon: Swift },
-    { name: "Python", icon: Python },
-];*/
 ---
 
 <style>
@@ -54,26 +48,6 @@ const SKILLS = [
         <div class="flex gap-8 flex-wrap sm:justify-start justify-center">
             {
                 SKILLS.map((skill) => (
-                    <div class="flex flex-col items-center skill-container">
-                        <div class="size-24 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
-                            <skill.icon class="size-16 text-black dark:text-white" />
-                        </div>
-                        <p class="mt-2 text-center text-gray-800 dark:text-gray-200 text-sm font-semibold skill-name">
-                            {skill.name}
-                        </p>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-
-    <div >
-        <h2 class="text-3xl font-bold mb-6 dark:text-white">
-            Aprendiendo
-        </h2>
-        <div class="flex gap-8 flex-wrap sm:justify-start justify-center">
-            {
-                LEARNING.map((skill) => (
                     <div class="flex flex-col items-center skill-container">
                         <div class="size-24 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
                             <skill.icon class="size-16 text-black dark:text-white" />
