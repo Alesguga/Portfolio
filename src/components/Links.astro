@@ -5,31 +5,31 @@ import MailIcon from '../components/icons/MailIcon.astro';
 import CvIcon from '../components/icons/Cv.astro';
 
 interface Props {
-  links: Array<{ href: string; icon: string; alt: string }>;
+    links: Array<{ href: string; icon: string; alt: string }>;
 }
 
-const { links } = Astro.props;
+const {links} = Astro.props;
 
 const icons: { [key: string]: (_props: Record<string, any>) => any } = {
-  GitHubIcon: GitHubIcon,
-  LinkedInIcon: LinkedInIcon,
-  MailIcon: MailIcon,
-  CvIcon: CvIcon,
+    GitHubIcon: GitHubIcon,
+    LinkedInIcon: LinkedInIcon,
+    MailIcon: MailIcon,
+    CvIcon: CvIcon,
 };
 ---
 
-<div class="flex space-x-4">
-  {links.map(link => {
-    const IconComponent = icons[link.icon];
-    return (
-      <a
-        href={link.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="p-2 rounded-lg border border-gray-400 dark:border-gray-700  hover:bg-gray-100 transition duration-150 hover:scale-105 dark:hover:bg-gray-800"
-      >
-        <IconComponent alt={link.alt} class="w-6 h-6 dark:text-white/80 text-black" />
-      </a>
-    );
-  })}
+<div class="flex justify-center gap-4">
+    {links.map(link => {
+        const IconComponent = icons[link.icon];
+        return (
+                <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-4 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg hover:shadow-xl transition-transform transform hover:scale-105"
+                >
+                    <IconComponent alt={link.alt} class="w-6 h-6"/>
+                </a>
+        );
+    })}
 </div>

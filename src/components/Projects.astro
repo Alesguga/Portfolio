@@ -3,287 +3,98 @@ import GitHub from "../components/icons/GitHub.astro";
 import Firebase from "../components/icons/Firebase.astro";
 import Android from "../components/icons/Android.astro";
 import Kotlin from "../components/icons/Kotlin.astro";
-import ReactN from "../components/icons/ReactN.astro";
-import Java from "../components/icons/Java.astro";
-import Html from "../components/icons/Html.astro";
-import BS5 from "../components/icons/BS5.astro";
-import MySQL from "../components/icons/MySQL.astro";
-import Python from "../components/icons/Python.astro";
-import AstroSVG from "../components/icons/AstroSVG.astro";
-import Golang from "../components/icons/Golang.astro";
-import ReactNN from "../components/icons/ReactNN.astro";
-import Expo from "../components/icons/Expo.astro";
-import Mongo from "./icons/Mongo.astro";
-import ChakraUI from "./icons/ChakraUI.astro";
 import Compose from "./icons/compose.astro";
-import Link from "./icons/Link.astro";
 
 const TAGS = {
-  FIRE: {
-    name: "Firebase",
-    class: "bg-stone-700 text-white",
-    icon: Firebase,
-  },
-  TAILWIND: {
-    name: "Tailwind",
-    class: "bg-[#003159] text-white",
-    icon: ReactN,
-  },
-  ASTRO: {
-    name: "Astro",
-    class: "bg-stone-400 text-white",
-    icon: AstroSVG,
-  },
-  KOTLIN: {
-    name: "Kotlin",
-    class: "bg-violet-950 text-white",
-    icon: Kotlin,
-  },
-  PYTHON: {
-    name: "Python",
-    class: "bg-yellow-600 text-white",
-    icon: Python,
-  },
-  GO: {
-    name: "Golang",
-    class: "bg-blue-400 text-white",
-    icon: Golang,
-  },
-  JAVA: {
-    name: "Java",
-    class: "bg-red-800 text-white",
-    icon: Java,
-  },
-  SQL: {
-    name: "SQL",
-    class: "bg-[#5c5c5c] text-white",
-    icon: MySQL,
-  },
-  HTML: {
-    name: "HTML",
-    class: "bg-orange-800 text-white",
-    icon: Html,
-  },
-  BS5: {
-    name: "BS5",
-    class: "bg-purple-900 text-white",
-    icon: BS5,
-  },
-  ANDROID: {
-    name: "Android",
-    class: "bg-green-400 text-white",
-    icon: Android,
-  },
-  RN: {
-    name: "React Native",
-    class: "bg-blue-800 text-white",
-    icon: ReactNN,
-  },
-  REACT: {
-    name: "React",
-    class: "bg-blue-600 text-white",
-    icon: ReactNN,
-  },
-  EXPO: {
-    name: "Expo",
-    class: "bg-gray-900 text-white",
-    icon: Expo,
-  },
-  MONGO: {
-    name: "MongoDB",
-    class: "bg-green-700 text-white",
-    icon: Mongo,
-  },
-  CHAKRA: {
-    name: "ChakraUI",
-    class: "bg-blue-800 text-white",
-    icon: ChakraUI,
-  },
-  COMPOSE: {
-    name: "Compose",
-    class: "bg-gray-900 text-white",
-    icon: Compose,
-  },
+    FIRE: { name: "Firebase", class: "bg-stone-700 text-white", icon: Firebase },
+    ANDROID: { name: "Android", class: "bg-green-400 text-white", icon: Android },
+    KOTLIN: { name: "Kotlin", class: "bg-violet-950 text-white", icon: Kotlin },
+    COMPOSE: { name: "Compose", class: "bg-gray-900 text-white", icon: Compose },
 };
 
 const PROJECTS = [
-  {
-    title: "Muebles el puente TFG",
-    description:
-      "Proyecto de trabajo de fin de grado, donde creo mi propia API con FastApi la web con Astro y la app con Kotlin, para una empresa de muebles. He usado servicios como firebase y retrofit con Kotlin también.",
-    github: "https://github.com/alesguga/MueblesElPuenteAppTFG",
-    link: "https://muebles-el-puente-web-tfg.vercel.app/",
-    image: "https://www.muebleselpuente.com/gallery/dor-cont12_22174ob8.jpg",
-    tags: [TAGS.FIRE, TAGS.ASTRO, TAGS.COMPOSE, TAGS.PYTHON],
-  },
-  {
-    title: "DevHub",
-    description:
-      "Proyecto para practicar con jetpack compose y Firebase, donde se pueden abrir nuevos foros y desde ahí poder hablar sobre cualquier tema relacionado con la programación.",
-    github: "https://github.com/alesguga/DevHub",
-    image: "./launcher.png",
-    tags: [TAGS.KOTLIN, TAGS.FIRE, TAGS.COMPOSE],
-  },
-  {
-    title: "Chistes Retrofit",
-    description:
-      "Aplicación en Android Studio en Kotlin que accedemos a una api mediante Retrofit que tiene login categorias de chistes buscador y permite introducir nuevos chistes",
-    github: "https://github.com/alesguga/ChistesRetrofit",
-    image:
-      "https://piks.eldesmarque.com/bin/2023/06/07/230606_dep_betis_homenaje_joaquin_zona_mixtamovmxf_frame_10538.jpeg",
-    tags: [TAGS.KOTLIN, TAGS.ANDROID],
-  },
-  {
-    title: "Caravan Retrofit",
-    description:
-      "Aplicación en Android Studio en Kotlin que accedemos a una api mediante Retrofit que tiene login, listado de caravanas, buscador y permite introducir nuevos sitios donde dormir en la caravana, pudiendo darle estrellas",
-    github: "https://github.com/alesguga/CaravanRetrofit",
-    image:
-      "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/06/fleetwood-bounder-1986-2729789.jpg",
-    tags: [TAGS.KOTLIN, TAGS.ANDROID],
-  },
-  {
-    title: "Mi primera api con Go y Firebase",
-    description:
-      "Realizo mi primera api con Golang y Firebase donde se puede realizar un CRUD y funciona a la perfeccion con un Front en React por ejemplo.",
-    github: "https://github.com/Alesguga/GolangApiNotes",
-    link: "https://golangapinotes-production.up.railway.app/notes",
-    image:
-      "https://cdn-images-1.medium.com/max/1200/1*1VNJ8QaNInU_kgRflPKXAQ.png",
-    tags: [TAGS.GO, TAGS.FIRE],
-  },
-  {
-    title: "Todo Web App Go React Ts",
-    description:
-      "Todo fullstack app con Go en el backend y React con Typescript y chakraUI en el frontend, con una base de datos en MongoDB, con deploy en Railway.",
-    github: "https://github.com/Alesguga/TodoWebapp-GoReactTs",
-    link: "https://todowebapp-goreactts-production.up.railway.app/",
-    image: "https://img-c.udemycdn.com/course/750x422/2734116_da25_3.jpg",
-    tags: [TAGS.GO, TAGS.MONGO, TAGS.REACT, TAGS.CHAKRA],
-  },
-  {
-    title: "PorraGut",
-    description:
-      "Web usando JavaWeb con JPA, JSTL, Ajax y una BBDD en Oracle para hacer una web de apuestas de goles de partidos de futbol de la liga española.",
-    github: "https://github.com/alesguga/PorraGutJPA",
-    image:
-      "https://www.mundiario.com/asset/thumbnail,1280,720,center,center/media/mundiario/images/2023/08/13/2023081312144866046.jpg",
-    tags: [TAGS.JAVA, TAGS.SQL, TAGS.HTML, TAGS.BS5],
-  },
-  {
-    title: "Games4All",
-    description:
-      "Aplicacion en React Native que busca videojuegos accediendo a una Api, cuenta con unos filtros de busqueda y diseño para Apple y Android",
-    github: "https://github.com/alesguga/AppConsumesApiRN",
-    image:
-      "https://assets.xboxservices.com/assets/1d/5b/1d5bc84f-2135-4e2f-8ca6-bb000d97db7f.jpg?n=Elden-Ring_GLP-Poster-Image-1084_1920x1080.jpg",
-    tags: [TAGS.RN, TAGS.EXPO],
-  },
-];
+    {
+        title: "Muebles el puente TFG",
+        description:
+            "Proyecto de trabajo de fin de grado, donde creo mi propia API con FastApi la web con Astro y la app con Kotlin, para una empresa de muebles.",
+        github: "https://github.com/alesguga/MueblesElPuenteAppTFG",
+        link: "https://muebles-el-puente-web-tfg.vercel.app/",
+        image: "https://www.muebleselpuente.com/gallery/dor-cont12_22174ob8.jpg",
+        tags: [TAGS.FIRE, TAGS.COMPOSE, TAGS.KOTLIN],
+    },
+    {
+        title: "Chistes Retrofit",
+        description:
+            "Aplicación en Android Studio en Kotlin que accede a una API mediante Retrofit. Incluye login, buscador, y permite introducir nuevos chistes.",
+        github: "https://github.com/alesguga/ChistesRetrofit",
+        image:
+            "https://piks.eldesmarque.com/bin/2023/06/07/230606_dep_betis_homenaje_joaquin_zona_mixtamovmxf_frame_10538.jpeg",
+        tags: [TAGS.KOTLIN, TAGS.ANDROID],
+    },
+    {
+        title: "Caravan Retrofit",
+        description:
+            "Aplicación Android en Kotlin para gestionar caravanas, con login, buscador, y la opción de valorar sitios donde dormir.",
+        github: "https://github.com/alesguga/CaravanRetrofit",
+        image:
+            "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/06/fleetwood-bounder-1986-2729789.jpg",
+        tags: [TAGS.KOTLIN, TAGS.ANDROID],
+    },
+].filter((project) => project.tags.some((tag) => tag === TAGS.KOTLIN));
 ---
 
-<script>
-  let currentIndex = 0;
-  const nextSlide = () => {
-    const slides = document.querySelectorAll('.slide');
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateSlidePosition(slides);
-  };
-
-  const prevSlide = () => {
-    const slides = document.querySelectorAll('.slide');
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = slides.length - 1;
-    }
-    updateSlidePosition(slides);
-  };
-
-  const updateSlidePosition = (slides) => {
-    slides.forEach((slide, index) => {
-      slide.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-  };
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#next').addEventListener('click', nextSlide);
-    document.querySelector('#prev').addEventListener('click', prevSlide);
-  });
-</script>
-
-<div class="p-4 sm:p-0">
-  <h1 class="dark:text-white mb-4 font-bold text-3xl text-gray-950">
-    Proyectos
-  </h1>
-  <div class="relative overflow-hidden">
-    <div class="flex transition-transform duration-300 ease-in-out p-1 gap-x-1">
-      {
-        PROJECTS.map(({ image, title, description, tags, github, link }) => (
-          <div class="slide flex-shrink-0 w-full md:w-1/2 lg:w-1/2 xl:w-1/2 bg-white dark:bg-gray-800 transition p-6 rounded-lg shadow-lg flex flex-col justify-between">
-            <div>
-              <img
-                class="w-full h-52 rounded-lg object-cover mb-6"
-                src={image}
-                alt={title}
-                loading="lazy"
-              />
-              <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">
-                {title}
-              </h3>
-              <div class="flex flex-wrap gap-2 mb-4">
-                {tags.map((tag) => (
-                  <span
-                    class={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold select-none ${tag.class}`}
-                  >
-                    <tag.icon class="w-4 h-4" />
-                    {tag.name}
-                  </span>
-                ))}
-              </div>
-              <p class="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
-            </div>
-            <div class="mt-auto flex gap-x-4 justify-start">
-              {github && (
-                <a
-                  href={github}
-                  role="link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-300 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400"
-                >
-                  <GitHub class="size-5 mr-2" />
-                  <span>Código</span>
-                </a>
-              )}
-              {link && (
-                <a
-                  href={link}
-                  role="link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex w-28 justify-center items-center transition hover:scale-[1.03] dark:bg-gray-700 dark:border-none border border-gray-300 hover:bg-gray-100 rounded p-1 text-blue-600 dark:text-blue-400"
-                >
-                  <Link class="size-5 mr-2" />
-                  <span>Enlace</span>
-                </a>
-              )}
-            </div>
-          </div>
-        ))
-      }
+<div class="p-6 sm:p-12">
+    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-12 text-center relative">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Proyectos</span>
+    </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {PROJECTS.map(({ image, title, description, tags, github, link }) => (
+                <div class="bg-white dark:bg-gray-800 transition p-4 rounded-lg shadow-md">
+                    <img
+                            src={image}
+                            alt={title}
+                            class="w-full h-44 object-cover rounded-md mb-4"
+                    />
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+                        {title}
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        {description}
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {tags.map((tag) => (
+                                <span
+                                        class={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${tag.class}`}
+                                >
+              <tag.icon class="w-4 h-4" />
+                                    {tag.name}
+            </span>
+                        ))}
+                    </div>
+                    <div class="flex gap-2">
+                        {github && (
+                                <a
+                                        href={github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md flex items-center"
+                                >
+                                    <GitHub class="w-4 h-4 mr-2" />
+                                    Código
+                                </a>
+                        )}
+                        {link && (
+                                <a
+                                        href={link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="px-3 py-2 bg-green-500 hover:bg-green-600 text-white text-sm rounded-md flex items-center"
+                                >
+                                    <span>Enlace</span>
+                                </a>
+                        )}
+                    </div>
+                </div>
+        ))}
     </div>
-  </div>
-  <div class="flex justify-between mt-4">
-    <button id="prev" class="bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover-bg-gray-700 text-gray-800 dark:text-gray-100 hover:scale-105 transition py-2 px-4 rounded-lg">
-      Anterior
-    </button>
-    <button id="next" class="bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover-bg-gray-700 text-gray-800 dark:text-gray-100 hover:scale-105 transition py-2 px-4 rounded-lg">
-      Siguiente
-    </button>
-  </div>
 </div>
